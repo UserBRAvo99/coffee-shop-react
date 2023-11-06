@@ -5,7 +5,7 @@ import { fonts } from "../../../utils/theme";
 
 const Hero = () => {
   return (
-    <Wrapper className="container">
+    <Wrapper>
       <Slogan>Drink coffee, enjoy with Samwyle</Slogan>
       <Title>Coffee Shop</Title>
       <BtnGreen height={"16px"} width={"18px"}>
@@ -19,8 +19,8 @@ const Hero = () => {
 export default Hero;
 
 const Wrapper = styled.div`
-  padding: 120px 0;
   display: flex;
+  padding: 120px 0;
   flex-direction: column;
   align-items: center;
   text-align: center;

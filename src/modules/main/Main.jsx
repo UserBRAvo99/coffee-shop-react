@@ -3,7 +3,7 @@ import Products from "./product/Products";
 
 export const Main = () => {
   return (
-    <main>
+    <main className="container">
       <Hero />
       <Products />
     </main>
