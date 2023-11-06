@@ -19,13 +19,13 @@ const Hero = () => {
 export default Hero;
 
 const Wrapper = styled.div`
+  padding: 120px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   width: 100%;
   height: auto;
-  padding: 120px 0;
 `;
 
 const Slogan = styled.p`
