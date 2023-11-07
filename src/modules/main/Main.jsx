@@ -9,7 +9,7 @@ export const Main = () => {
       <Hero className="container" />
       <AboutProduct />
       <Products className="container" />
-      <Footer className="container" />
+      <Footer />
     </main>
   );
 };

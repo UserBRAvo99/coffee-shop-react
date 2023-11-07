@@ -12,7 +12,7 @@ const AboutProduct = () => {
               <WrapperImg
                 height={about.img.height}
                 color={about.color}
-                up={about.img.up}
+                $up={about.img.up}
               >
                 {about.img.svg}
               </WrapperImg>
@@ -54,7 +54,7 @@ const WrapperImg = styled.div`
   margin-bottom: 30px;
   svg {
     position: absolute;
-    top: ${(props) => (props.up ? props.up : "50%")};
+    top: ${(props) => props.up};
     left: 50%;
     transform: translate(-50%, -50%);
     width: calc(100% - 36px);
