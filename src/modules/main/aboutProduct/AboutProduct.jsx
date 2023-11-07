@@ -54,7 +54,7 @@ const WrapperImg = styled.div`
   margin-bottom: 30px;
   svg {
     position: absolute;
-    top: ${(props) => props.up};
+    top: ${(props) => props.$up};
     left: 50%;
     transform: translate(-50%, -50%);
     width: calc(100% - 36px);
