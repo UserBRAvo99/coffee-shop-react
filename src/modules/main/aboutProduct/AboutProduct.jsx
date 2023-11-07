@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import dataAboutProduct from "../../../data/dataAboutProducts";
+import { dataAboutProduct } from "../../../data/dataAboutProducts";
+import { fonts, theme } from "../../../utils/theme";
 
 const AboutProduct = () => {
   return (
@@ -68,23 +69,13 @@ const WrapperInfo = styled.div`
 `;
 
 const Title = styled.h3`
-  color: #000;
-
-  font-family: Josefin Sans;
+  color: ${theme.color.black};
+  font-family: ${fonts.josefin};
   font-size: 38px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   text-align: center;
 `;
 
 const Info = styled.p`
-  color: #444a4a;
-
-  font-family: Alegreya Sans;
-  font-size: 19px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 36px; /* 189.474% */
-  letter-spacing: 0.019px;
+  color: ${theme.color.grey};
 `;

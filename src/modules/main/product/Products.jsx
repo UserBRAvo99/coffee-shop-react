@@ -1,21 +1,7 @@
 import styled from "styled-components";
 import { fonts, theme } from "../../../utils/theme";
 import BtnGreen from "../../../shared/BtnGreen";
-
-const dataDrink = [
-  {
-    drink: "Espresso",
-    info: "Espresso - black coffee made in a coffee machine or a special coffee machine, where hot water is passed through pressed ground beans at a pressure.",
-  },
-  {
-    drink: "Latte",
-    info: "The name Latte (from Italian “milk”) speaks about the main ingredient of the drink. It is recommended to take fat milk - at least 3.2%. In addition to it, milk foam.",
-  },
-  {
-    drink: "Americano",
-    info: "Americano (Italian: Caffè Americano - American-style coffee) is a method of preparing coffee that involves combining a certain amount of hot water and espresso.",
-  },
-];
+import { dataDrink } from "../../../data/dataAboutProducts";
 
 const Products = () => {
   return (

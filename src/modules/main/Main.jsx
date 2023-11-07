@@ -1,6 +1,7 @@
 import Hero from "./hero/Hero";
 import AboutProduct from "./aboutProduct/AboutProduct";
 import Products from "./product/Products";
+import Footer from "./footer/Footer";
 
 export const Main = () => {
   return (
@@ -8,6 +9,7 @@ export const Main = () => {
       <Hero className="container" />
       <AboutProduct />
       <Products className="container" />
+      <Footer className="container" />
     </main>
   );
 };

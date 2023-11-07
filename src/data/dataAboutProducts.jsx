@@ -1,4 +1,4 @@
-const dataAboutProduct = [
+export const dataAboutProduct = [
   {
     color: "#FAE9E0",
     img: { svg: imgData("Cup"), height: "248px", up: "40%" },
@@ -17,8 +17,6 @@ const dataAboutProduct = [
     ],
   },
 ];
-
-export default dataAboutProduct;
 
 function imgData(img) {
   switch (img) {
@@ -56,3 +54,25 @@ function imgData(img) {
       );
   }
 }
+
+export const dataDrink = [
+  {
+    drink: "Espresso",
+    info: "Espresso - black coffee made in a coffee machine or a special coffee machine, where hot water is passed through pressed ground beans at a pressure.",
+  },
+  {
+    drink: "Latte",
+    info: "The name Latte (from Italian “milk”) speaks about the main ingredient of the drink. It is recommended to take fat milk - at least 3.2%. In addition to it, milk foam.",
+  },
+  {
+    drink: "Americano",
+    info: "Americano (Italian: Caffè Americano - American-style coffee) is a method of preparing coffee that involves combining a certain amount of hot water and espresso.",
+  },
+];
+
+export const ourAddress = [
+  "110 St-Cathedral Pkwy Station",
+  "4310 94th St, Flushing",
+  "94-54 Corona Ave., Elmhurst",
+  "5627 Van Doren St, Queens",
+];
