@@ -10,8 +10,8 @@ const AboutProduct = () => {
           return (
             <Item key={about.title}>
               <WrapperImg
-                height={about.img.height}
-                color={about.color}
+                $height={about.img.height}
+                $color={about.color}
                 $up={about.img.up}
               >
                 {about.img.svg}
@@ -49,8 +49,8 @@ const WrapperImg = styled.div`
   display: flex;
   position: relative;
   width: 100%;
-  height: ${(props) => props.height};
-  background-color: ${(props) => props.color};
+  height: ${(props) => props.$height};
+  background-color: ${(props) => props.$color};
   margin-bottom: 30px;
   svg {
     position: absolute;

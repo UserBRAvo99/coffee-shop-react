@@ -12,7 +12,11 @@ const Products = () => {
             <Item key={coffee.drink}>
               <Title>{coffee.drink}</Title>
               <Info>{coffee.info}</Info>
-              <BtnGreen height={"15px"} width={"49px"}>
+              <BtnGreen
+                height={"15px"}
+                width={"49px"}
+                color={theme.color.darkGreen}
+              >
                 <Span>Add to cart</Span>
               </BtnGreen>
             </Item>

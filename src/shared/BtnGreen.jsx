@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { theme } from "../utils/theme";
 
-const BtnGreen = ({ height, width, children }) => {
+const BtnGreen = ({ height, width, color, children }) => {
   return (
-    <Btn height={height} width={width}>
+    <Btn height={height} width={width} color={color}>
       {children}
     </Btn>
   );
@@ -17,7 +17,8 @@ const Btn = styled.button`
   padding: ${(props) => props.height} ${(props) => props.width};
   align-items: center;
   color: ${theme.color.white};
-  background-color: ${theme.color.darkGreen};
+  background-color: ${(props) => props.color};
   border: transparent;
   border-radius: 5px;
+  margin: 0 auto;
 `;

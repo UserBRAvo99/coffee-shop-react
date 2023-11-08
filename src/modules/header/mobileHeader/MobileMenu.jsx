@@ -25,6 +25,7 @@ export default MobileMenu;
 
 const Wrapper = styled.div`
   display: flex;
+  z-index: 10;
   padding: 0 18px 0 18px;
   flex-direction: column;
   position: absolute;
