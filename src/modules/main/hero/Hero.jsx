@@ -5,7 +5,7 @@ import { fonts, theme } from "../../../utils/theme";
 
 const Hero = () => {
   return (
-    <Wrapper>
+    <Wrapper id="home">
       <Slogan>Drink coffee, enjoy with Samwyle</Slogan>
       <Title>Coffee Shop</Title>
       <BtnGreen height={"16px"} width={"18px"} color={theme.color.darkGreen}>

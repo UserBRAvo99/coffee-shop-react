@@ -1,17 +1,30 @@
 import styled from "styled-components";
 import { theme, fonts } from "../../../utils/theme";
 import SocIcons from "../../../shared/SocIcons";
-
-const dataMenuLink = ["Home", "About us", "Promotion", "Shop", "Contacts"];
+import { Link } from "react-scroll";
+import { useContext } from "react";
+import { ShopContext } from "../../../context/ShopProvider";
+import { dataMenuLink } from "../../../data/dataAboutProducts";
 
 const MobileMenu = ({ children }) => {
+  const { handleClickBtn } = useContext(ShopContext);
   return (
     <Wrapper>
       {children}
       <List>
         {dataMenuLink.map((item) => (
-          <Item key={item}>
-            <Link href="#">{item}</Link>
+          <Item key={item[1]}>
+            <Link
+              activeClass="active"
+              to={item[1]}
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={800}
+              onClick={handleClickBtn}
+            >
+              {item[0]}
+            </Link>
           </Item>
         ))}
       </List>
@@ -52,14 +65,21 @@ const Item = styled.li`
   &:last-child {
     margin-bottom: 0;
   }
+  a {
+    text-decoration: none;
+    color: ${theme.color.black};
+    font-family: ${fonts.josefin.fontFamily};
+    font-size: 36px;
+    font-weight: 500;
+  }
 `;
-const Link = styled.a`
-  text-decoration: none;
-  color: ${theme.color.black};
-  font-family: ${fonts.josefin.fontFamily};
-  font-size: 36px;
-  font-weight: 500;
-`;
+// const LinkNav = styled.a`
+//   text-decoration: none;
+//   color: ${theme.color.black};
+//   font-family: ${fonts.josefin.fontFamily};
+//   font-size: 36px;
+//   font-weight: 500;
+// `;
 
 const DarkLine = styled.div`
   width: 134px;

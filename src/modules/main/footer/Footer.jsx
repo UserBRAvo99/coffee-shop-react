@@ -18,7 +18,7 @@ const FooterShop = () => {
         </Item>
         <Item>
           <WrapperAddress>
-            <Title>Our address</Title>
+            <Title id="contacts">Our address</Title>
             <OurAddressFooter number="2" />
             <BtnGreen height="16px" width="18px" color={theme.color.white}>
               <SpanBtn>Order Here</SpanBtn>

@@ -76,3 +76,11 @@ export const ourAddress = [
   "94-54 Corona Ave., Elmhurst",
   "5627 Van Doren St, Queens",
 ];
+
+export const dataMenuLink = [
+  ["Home", "home"],
+  ["About us", "about"],
+  ["Promotion", "promotion"],
+  ["Shop", "shop"],
+  ["Contacts", "contacts"],
+];

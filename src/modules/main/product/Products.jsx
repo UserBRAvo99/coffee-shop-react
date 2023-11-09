@@ -5,7 +5,7 @@ import { dataDrink } from "../../../data/dataAboutProducts";
 
 const Products = () => {
   return (
-    <section className="container">
+    <section className="container" id="shop">
       <List>
         {dataDrink.map((coffee) => {
           return (

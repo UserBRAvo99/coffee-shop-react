@@ -6,7 +6,6 @@ export const ShopContext = createContext();
 export const ShopProvider = ({ children }) => {
   // мобільне меню
   const [isOpen, setIsOpen] = useState(false);
-  useEffect(() => {}, []);
 
   const handleClickBtn = () => {
     setIsOpen(!isOpen);

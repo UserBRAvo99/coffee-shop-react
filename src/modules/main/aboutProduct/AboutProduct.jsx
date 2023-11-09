@@ -4,7 +4,7 @@ import { fonts, theme } from "../../../utils/theme";
 
 const AboutProduct = () => {
   return (
-    <Section>
+    <Section id="about">
       <List>
         {dataAboutProduct.map((about) => {
           return (
