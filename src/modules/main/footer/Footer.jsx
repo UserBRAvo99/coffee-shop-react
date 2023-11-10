@@ -3,27 +3,37 @@ import OurAddressFooter from "../../../shared/OurAddressFooter";
 import { fonts, theme } from "../../../utils/theme";
 import BtnGreen from "../../../shared/BtnGreen";
 import { ArrowSvg } from "../../../shared/ArrowSvg";
+import GoogleMap from "./googleMap/GoogleMap";
+import { useContext } from "react";
+import { ShopContext } from "../../../context/ShopProvider";
 
 const FooterShop = () => {
+  const { isTabletScreen, isNoteScreen } = useContext(ShopContext);
   return (
     <Footer className="container">
       <List>
         <Item>
-          <Iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d775665.1977575189!2d-74.41089437890638!3d40.587031695247866!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z0J3RjNGOLdCZ0L7RgNC6LCDQodC_0L7Qu9GD0YfQtdC90ZYg0KjRgtCw0YLQuCDQkNC80LXRgNC40LrQuA!5e0!3m2!1suk!2sua!4v1699386649348!5m2!1suk!2sua"
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></Iframe>
+          <GoogleMap />
         </Item>
+        {isNoteScreen && (
+          <Item>
+            <BlackLine></BlackLine>
+          </Item>
+        )}
         <Item>
           <WrapperAddress>
             <Title id="contacts">Our address</Title>
-            <OurAddressFooter number="2" />
-            <BtnGreen height="16px" width="18px" color={theme.color.white}>
-              <SpanBtn>Order Here</SpanBtn>
-              <ArrowSvg />
-            </BtnGreen>
+            {isTabletScreen ? (
+              <OurAddressFooter number="2" />
+            ) : (
+              <OurAddressFooter number="4" />
+            )}
+            {isTabletScreen && (
+              <BtnGreen height="16px" width="18px" color={theme.color.white}>
+                <SpanBtn>See more address</SpanBtn>
+                <ArrowSvg />
+              </BtnGreen>
+            )}
           </WrapperAddress>
         </Item>
       </List>
@@ -42,16 +52,44 @@ const Footer = styled.footer`
 
 const List = styled.ul`
   padding-bottom: 60px;
+  @media screen and (min-width: 767px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+  }
+  @media screen and (min-width: 1023px) {
+    gap: 20px;
+    align-items: start;
+  }
 `;
 
-const Item = styled.li``;
+const Item = styled.li`
+  @media screen and (min-width: 767px) {
+    width: calc(50% - 20px);
+    height: auto;
+  }
+  @media screen and (min-width: 1023px) {
+    &:nth-child(1) {
+      width: 100%;
+      height: 351px;
+    }
+    &:nth-child(2) {
+      width: 102px;
+      margin-top: 32px;
+      margin-bottom: auto;
+    }
+    &:nth-child(3) {
+      margin-top: 20px;
+    }
+  }
+`;
 
-const Iframe = styled.iframe`
-  width: 100%;
-  height: 300px;
-  filter: grayscale(100%);
-  filter: gray;
-  border: 0;
+const BlackLine = styled.div`
+  display: block;
+  width: 102px;
+  height: 2px;
+  background-color: ${theme.color.grey};
 `;
 
 const WrapperAddress = styled.div`
