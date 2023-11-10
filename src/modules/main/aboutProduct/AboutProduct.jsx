@@ -43,6 +43,12 @@ const List = styled.ul`
 const Item = styled.li`
   display: flex;
   flex-direction: column;
+  @media screen and (min-width: 1023px) {
+    flex-direction: row;
+    &:nth-child(2) {
+      flex-direction: row-reverse;
+    }
+  }
 `;
 
 const WrapperImg = styled.div`
@@ -60,12 +66,16 @@ const WrapperImg = styled.div`
     width: calc(100% - 36px);
     height: 110%;
   }
+  @media screen and (min-width: 1023px) {
+  }
 `;
 
 const WrapperInfo = styled.div`
   display: flex;
   flex-direction: column;
   gap: 30px;
+  @media screen and (min-width: 1023px) {
+  }
 `;
 
 const Title = styled.h3`
