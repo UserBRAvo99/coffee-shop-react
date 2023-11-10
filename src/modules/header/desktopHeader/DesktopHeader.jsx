@@ -80,12 +80,17 @@ const WrapperNavBtn = styled.div`
 const List = styled.ul`
   display: flex;
   width: 400px;
-  /* width: 485px; */
   align-items: end;
   justify-content: space-between;
   @media screen and (min-width: 1023px) {
     &:last-child {
       margin-right: 40px;
+    }
+  }
+  @media screen and (min-width: 1439px) {
+    width: 485px;
+    &:last-child {
+      margin-right: 90px;
     }
   }
 `;

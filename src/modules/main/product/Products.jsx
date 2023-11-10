@@ -32,6 +32,19 @@ export default Products;
 const List = styled.ul`
   padding-bottom: 30px;
   padding-top: 30px;
+  @media screen and (min-width: 449px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @media screen and (min-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  @media screen and (min-width: 900px) {
+    justify-content: space-around;
+  }
 `;
 
 const Item = styled.li`
@@ -42,8 +55,26 @@ const Item = styled.li`
   background: ${theme.color.white};
   box-shadow: 0px 23px 34px 0px rgba(35, 57, 55, 0.17);
   margin-bottom: 30px;
+  & button {
+    margin-top: auto;
+  }
   &:last-child {
     margin-bottom: 0;
+  }
+  @media screen and (min-width: 449px) {
+    width: 400px;
+  }
+  @media screen and (min-width: 767px) {
+    width: calc(50% - 20px);
+    &:nth-child(n + 1) {
+      margin-bottom: 0;
+    }
+  }
+  @media screen and (min-width: 900px) {
+    width: 400px;
+    &:nth-child(n + 1) {
+      margin-bottom: 0;
+    }
   }
 `;
 
