@@ -1,12 +1,16 @@
 import styled from "styled-components";
 import MobileHeader from "./mobileHeader/MobileHeader";
-import { useMediaQuery } from "react-responsive";
+import { useContext } from "react";
+import { ShopContext } from "../../context/ShopProvider";
+import DesktopHeader from "./desktopHeader/DesktopHeader";
 
 const Header = () => {
-  // const isBigScreen = useMediaQuery({ query: "(min-width: 1440px)" });
-  const isTabletScreen = useMediaQuery({ query: "(max-width: 768px)" });
+  const { isTabletScreen } = useContext(ShopContext);
+
   return (
-    <Head className="container">{isTabletScreen && <MobileHeader />}</Head>
+    <Head className="container">
+      {isTabletScreen ? <MobileHeader /> : <DesktopHeader />}
+    </Head>
   );
 };
 

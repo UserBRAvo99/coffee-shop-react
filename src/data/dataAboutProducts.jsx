@@ -18,6 +18,40 @@ export const dataAboutProduct = [
   },
 ];
 
+export const dataDrink = [
+  {
+    drink: "Espresso",
+    info: "Espresso - black coffee made in a coffee machine or a special coffee machine, where hot water is passed through pressed ground beans at a pressure.",
+  },
+  {
+    drink: "Latte",
+    info: "The name Latte (from Italian “milk”) speaks about the main ingredient of the drink. It is recommended to take fat milk - at least 3.2%. In addition to it, milk foam.",
+  },
+  {
+    drink: "Americano",
+    info: "Americano (Italian: Caffè Americano - American-style coffee) is a method of preparing coffee that involves combining a certain amount of hot water and espresso.",
+  },
+  {
+    drink: "Ristreto",
+    info: `Ristreto (ital. ristretto - cool. "thick, strong; rich") is a strong coffee drink, the portion of which is smaller in volume than espresso. As a rule, to prepare such a drink, you need 7 g of coffee per 15-20 ml of water.`,
+  },
+];
+
+export const ourAddress = [
+  "110 St-Cathedral Pkwy Station",
+  "4310 94th St, Flushing",
+  "94-54 Corona Ave., Elmhurst",
+  "5627 Van Doren St, Queens",
+];
+
+export const dataMenuLink = [
+  ["Home", "home"],
+  ["About us", "about"],
+  ["Promotion", "promotion"],
+  ["Shop", "shop"],
+  ["Contacts", "contacts"],
+];
+
 function imgData(img) {
   switch (img) {
     case "Cup":
@@ -54,33 +88,3 @@ function imgData(img) {
       );
   }
 }
-
-export const dataDrink = [
-  {
-    drink: "Espresso",
-    info: "Espresso - black coffee made in a coffee machine or a special coffee machine, where hot water is passed through pressed ground beans at a pressure.",
-  },
-  {
-    drink: "Latte",
-    info: "The name Latte (from Italian “milk”) speaks about the main ingredient of the drink. It is recommended to take fat milk - at least 3.2%. In addition to it, milk foam.",
-  },
-  {
-    drink: "Americano",
-    info: "Americano (Italian: Caffè Americano - American-style coffee) is a method of preparing coffee that involves combining a certain amount of hot water and espresso.",
-  },
-];
-
-export const ourAddress = [
-  "110 St-Cathedral Pkwy Station",
-  "4310 94th St, Flushing",
-  "94-54 Corona Ave., Elmhurst",
-  "5627 Van Doren St, Queens",
-];
-
-export const dataMenuLink = [
-  ["Home", "home"],
-  ["About us", "about"],
-  ["Promotion", "promotion"],
-  ["Shop", "shop"],
-  ["Contacts", "contacts"],
-];
