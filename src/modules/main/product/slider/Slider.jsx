@@ -64,7 +64,6 @@ const WrapperSlider = styled.div`
   height: auto;
   margin: 0 auto;
   @media screen and (min-width: 1439px) {
-    width: 1420px;
   }
 `;
 
@@ -76,7 +75,7 @@ const WrapperDrink = styled.div`
   background: ${theme.color.white};
   /* align-items: stretch; */
   /* box-shadow: 0px 23px 34px 0px rgba(35, 57, 55, 0.17); */
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   & button {
     margin-top: auto;
   }
