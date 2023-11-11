@@ -15,7 +15,7 @@ const Hero = () => {
         <Title>Coffee Shop</Title>
         <BtnGreen height={"16px"} width={"18px"} color={theme.color.darkGreen}>
           <Span>Order Here</Span>
-          <ArrowSvg />
+          <ArrowSvg color={theme.color.white} />
         </BtnGreen>
       </Wrapper>
       {isNoteScreen && <HeroDesktopPart />}

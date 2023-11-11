@@ -31,7 +31,7 @@ const FooterShop = () => {
             {isTabletScreen && (
               <BtnGreen height="16px" width="18px" color={theme.color.white}>
                 <SpanBtn>See more address</SpanBtn>
-                <ArrowSvg />
+                <ArrowSvg color={theme.color.black} />
               </BtnGreen>
             )}
           </WrapperAddress>
