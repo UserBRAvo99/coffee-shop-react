@@ -59,6 +59,7 @@ const Link = styled.a`
   height: 32px;
   border: solid 2px ${theme.color.grey};
   border-radius: 50%;
+
   svg {
     position: absolute;
     top: 14%;
@@ -67,6 +68,7 @@ const Link = styled.a`
     fill: ${theme.color.grey};
     width: 70%;
     height: 70%;
+    transform: rotate(90deg);
   }
   &:hover,
   &:focus {
