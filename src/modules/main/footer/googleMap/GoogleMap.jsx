@@ -14,9 +14,13 @@ const GoogleMap = () => {
 export default GoogleMap;
 
 const Iframe = styled.iframe`
-  width: 100%;
+  width: 90%;
   height: 300px;
   filter: grayscale(100%);
   filter: gray;
   border: 0;
+  @media screen and (min-width: 1439px) {
+    max-width: 646px;
+    height: 351px;
+  }
 `;

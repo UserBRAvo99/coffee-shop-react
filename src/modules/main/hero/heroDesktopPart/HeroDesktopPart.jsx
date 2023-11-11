@@ -2,10 +2,14 @@ import styled from "styled-components";
 import { fonts, theme } from "../../../../utils/theme";
 import { ArrowSvg } from "../../../../shared/ArrowSvg";
 import CoffeeMakerHeroSvg from "../../../../shared/CoffeeMakerHeroSvg";
+import { useContext } from "react";
+import { ShopContext } from "../../../../context/ShopProvider";
+import SocFromHero from "../../../../shared/SocFromHero";
 
 const HeroDesktopPart = () => {
+  const { isDeskScreen } = useContext(ShopContext);
   return (
-    <div>
+    <>
       <List>
         <ArrowBox>
           <ArrowSvg color={theme.color.black} />
@@ -14,9 +18,13 @@ const HeroDesktopPart = () => {
           <CoffeeMakerHeroSvg />
           <SpanCoffeeBox>Coffee</SpanCoffeeBox>
         </CoffeeBox>
-        <SocBox></SocBox>
+        {isDeskScreen && (
+          <SocBox>
+            <SocFromHero />
+          </SocBox>
+        )}
       </List>
-    </div>
+    </>
   );
 };
 
@@ -25,6 +33,9 @@ export default HeroDesktopPart;
 const List = styled.ul`
   display: flex;
   align-items: end;
+  @media screen and (min-width: 1023px) {
+    padding-bottom: 197px;
+  }
 `;
 
 const ArrowBox = styled.li`
@@ -63,10 +74,12 @@ const SpanCoffeeBox = styled.span`
   color: ${theme.color.grey};
   /* font-family: ${fonts.cedarville}; */
   font-family: Cedarville Cursive;
-
   font-size: 72px;
 `;
 
 const SocBox = styled.li`
+  display: flex;
+  width: 72px;
+  position: relative;
   transform: rotate(-90deg);
 `;

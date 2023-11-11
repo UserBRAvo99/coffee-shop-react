@@ -6,7 +6,6 @@ const OurAddressFooter = ({ number }) => {
   for (let index = 0; index < Number(number); index += 1) {
     arr.push(ourAddress[index]);
   }
-  console.log(arr);
 
   return (
     <List>

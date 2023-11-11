@@ -26,9 +26,7 @@ const Hero = () => {
 export default Hero;
 
 const HeroWrapper = styled.div`
-  @media screen and (min-width: 1023px) {
-    display: flex;
-  }
+  display: flex;
 `;
 
 const Wrapper = styled.div`
