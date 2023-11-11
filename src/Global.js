@@ -12,6 +12,14 @@ letter-spacing: 0.019px;
 * {
   box-sizing: border-box;
 }
+
+body {
+  @media screen and (min-width: 1440px) {
+    width: 1440px;
+    height: auto;
+    margin: 0 auto;
+  }
+}
 .container {
   padding: 0 18px;
   @media screen and (min-width: 767px) {
@@ -24,6 +32,7 @@ letter-spacing: 0.019px;
     padding: 0 120px;
   }
 }
+
 
 
 ul,
