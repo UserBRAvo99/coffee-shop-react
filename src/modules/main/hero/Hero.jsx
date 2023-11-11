@@ -2,21 +2,34 @@ import styled from "styled-components";
 import BtnGreen from "../../../shared/BtnGreen";
 import { ArrowSvg } from "../../../shared/ArrowSvg";
 import { fonts, theme } from "../../../utils/theme";
+import HeroDesktopPart from "./heroDesktopPart/HeroDesktopPart";
+import { useContext } from "react";
+import { ShopContext } from "../../../context/ShopProvider";
 
 const Hero = () => {
+  const { isNoteScreen } = useContext(ShopContext);
   return (
-    <Wrapper id="home">
-      <Slogan>Drink coffee, enjoy with Samwyle</Slogan>
-      <Title>Coffee Shop</Title>
-      <BtnGreen height={"16px"} width={"18px"} color={theme.color.darkGreen}>
-        <Span>Order Here</Span>
-        <ArrowSvg />
-      </BtnGreen>
-    </Wrapper>
+    <HeroWrapper className="container">
+      <Wrapper id="home">
+        <Slogan>Drink coffee, enjoy with Samwyle</Slogan>
+        <Title>Coffee Shop</Title>
+        <BtnGreen height={"16px"} width={"18px"} color={theme.color.darkGreen}>
+          <Span>Order Here</Span>
+          <ArrowSvg />
+        </BtnGreen>
+      </Wrapper>
+      {isNoteScreen && <HeroDesktopPart />}
+    </HeroWrapper>
   );
 };
 
 export default Hero;
+
+const HeroWrapper = styled.div`
+  @media screen and (min-width: 1023px) {
+    display: flex;
+  }
+`;
 
 const Wrapper = styled.div`
   display: flex;

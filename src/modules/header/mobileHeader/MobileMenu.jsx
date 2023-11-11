@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { theme, fonts } from "../../../utils/theme";
-import SocIcons from "../../../shared/SocIcons";
 import { Link } from "react-scroll";
 import { useContext } from "react";
 import { ShopContext } from "../../../context/ShopProvider";
 import { dataMenuLink } from "../../../data/dataAboutProducts";
+import SocIcons from "../../../shared/SocIconsForMobileMenu";
 
 const MobileMenu = ({ children }) => {
   const { handleClickBtn } = useContext(ShopContext);
