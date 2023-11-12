@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useModal = () => {
+const useMobileMenu = () => {
   // Модалка для мобільного меню
   const [isOpen, setIsOpen] = useState(false);
   const handleClickBtn = () => {
@@ -18,4 +18,4 @@ const useModal = () => {
   return { handleClickBtn, isOpen };
 };
 
-export default useModal;
+export default useMobileMenu;

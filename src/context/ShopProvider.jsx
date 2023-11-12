@@ -1,12 +1,13 @@
 import { createContext } from "react";
 import { useMediaQuery } from "react-responsive";
-import useModal from "./hooks/useModal";
+import useMobileMenu from "./hooks/useMobileMenu";
 
 export const ShopContext = createContext();
 
 export const ShopProvider = ({ children }) => {
   // викликаю власний хук та деструктуризую його методи, які потім переношу в value. Щоб далі передати їх через Context по проекту.
-  const { handleClickBtn, isOpen } = useModal();
+  const { handleClickBtn, isOpen } = useMobileMenu();
+
   // медіа запити визначені за допомогою react-responsive , допомагає виконати рендер за умовою
   const isTabletScreen = useMediaQuery({ query: "(max-width: 767px)" });
   const isNoteScreen = useMediaQuery({ query: "(min-width: 1023px)" });

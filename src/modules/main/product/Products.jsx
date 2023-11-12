@@ -5,7 +5,7 @@ import { dataDrink } from "../../../data/dataAboutProducts";
 
 const Products = () => {
   return (
-    <section className="container" id="shop">
+    <Section className="container" id="shop">
       <List>
         {dataDrink.map((coffee) => {
           return (
@@ -23,11 +23,18 @@ const Products = () => {
           );
         })}
       </List>
-    </section>
+    </Section>
   );
 };
 
 export default Products;
+
+const Section = styled.section`
+  padding-bottom: 96px;
+  @media screen and (min-width: 767px) {
+    padding-bottom: 131px;
+  }
+`;
 
 const List = styled.ul`
   padding-bottom: 30px;
@@ -92,8 +99,7 @@ const Info = styled.p`
   text-align: center;
   font-family: ${fonts.alegreya.fontFamily};
   font-size: 19px;
-  font-weight: 400;
-  line-height: 36px; /* 189.474% */
+  line-height: 36px;
   letter-spacing: 0.019px;
   margin-bottom: 36px;
 `;

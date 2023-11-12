@@ -15,7 +15,7 @@ import CustomBtn from "./customBtnFromSwiper/CustomBtn";
 const Slider = () => {
   return (
     <Background>
-      <WrapperSlider>
+      <WrapperSlider id="shop">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}
@@ -60,6 +60,7 @@ const Background = styled.div`
 `;
 
 const WrapperSlider = styled.div`
+  position: relative;
   padding: 45px 0;
   width: calc(100% - 200px);
   height: auto;
@@ -84,7 +85,7 @@ const WrapperDrink = styled.div`
   }
   @media screen and (min-width: 1439px) {
     padding: 44px 47px 47px 47px;
-    height: 500px;
+    height: 470px;
   }
 `;
 
@@ -103,7 +104,7 @@ const Info = styled.p`
   font-family: ${fonts.alegreya.fontFamily};
   font-size: 19px;
   font-weight: 400;
-  line-height: 36px; /* 189.474% */
+  line-height: 36px;
   letter-spacing: 0.019px;
   margin-bottom: 36px;
 `;
