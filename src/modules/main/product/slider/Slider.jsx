@@ -10,6 +10,7 @@ import { dataDrink } from "../../../../data/dataAboutProducts";
 import { fonts, theme } from "../../../../utils/theme";
 import styled from "styled-components";
 import BtnGreen from "../../../../shared/BtnGreen";
+import CustomBtn from "./customBtnFromSwiper/CustomBtn";
 
 const Slider = () => {
   return (
@@ -19,7 +20,7 @@ const Slider = () => {
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}
           slidesPerView={3}
-          navigation
+          // navigation
           // pagination={{ clickable: true }}
           // scrollbar={{ draggable: true }}
           // onSwiper={(swiper) => console.log(swiper)}
@@ -42,6 +43,7 @@ const Slider = () => {
               </SwiperSlide>
             );
           })}
+          <CustomBtn />
         </Swiper>
       </WrapperSlider>
     </Background>
