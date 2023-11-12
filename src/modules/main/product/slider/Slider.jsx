@@ -61,10 +61,11 @@ const Background = styled.div`
 
 const WrapperSlider = styled.div`
   padding: 45px 0;
-  width: calc(100% - 120px);
+  width: calc(100% - 200px);
   height: auto;
   margin: 0 auto;
   @media screen and (min-width: 1439px) {
+    width: calc(100% - 350px);
   }
 `;
 
@@ -79,11 +80,11 @@ const WrapperDrink = styled.div`
     margin-top: auto;
   }
   @media screen and (min-width: 1023px) {
-    height: 500px;
+    height: 480px;
   }
   @media screen and (min-width: 1439px) {
     padding: 44px 47px 47px 47px;
-    height: 460px;
+    height: 500px;
   }
 `;
 

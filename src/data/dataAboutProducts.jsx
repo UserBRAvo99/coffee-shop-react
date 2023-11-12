@@ -33,7 +33,7 @@ export const dataDrink = [
   },
   {
     drink: "Ristreto",
-    info: `Ristreto (ital. ristretto - cool. "thick, strong; rich") is a strong coffee drink, the portion of which is smaller in volume than espresso. As a rule, to prepare such a drink, you need 7 g of coffee per 15-20 ml of water.`,
+    info: `Ristreto (ital. ristretto - cool. "thick, strong; rich") is a strong coffee drink, the portion of which is smaller in volume than espresso.You need 7 g of coffee per 15-20 ml of water.`,
   },
 ];
 
