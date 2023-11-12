@@ -16,15 +16,14 @@ const Slider = () => {
     <Background>
       <WrapperSlider>
         <Swiper
-          // install Swiper modules
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}
           slidesPerView={3}
           navigation
           // pagination={{ clickable: true }}
           // scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => console.log(swiper)}
+          // onSlideChange={() => console.log("slide change")}
         >
           {dataDrink.map((coffee) => {
             return (
@@ -73,18 +72,16 @@ const WrapperDrink = styled.div`
   padding: 30px 20px 30px 20px;
   border-radius: 25px;
   background: ${theme.color.white};
-  /* align-items: stretch; */
-  /* box-shadow: 0px 23px 34px 0px rgba(35, 57, 55, 0.17); */
-  /* margin-bottom: 30px; */
+  min-width: 0;
   & button {
     margin-top: auto;
   }
   @media screen and (min-width: 1023px) {
-    padding: 44px 47px 47px 47px;
+    height: 500px;
   }
   @media screen and (min-width: 1439px) {
-    width: 340px;
-    height: 500px;
+    padding: 44px 47px 47px 47px;
+    height: 460px;
   }
 `;
 

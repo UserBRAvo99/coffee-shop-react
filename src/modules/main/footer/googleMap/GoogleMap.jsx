@@ -14,7 +14,7 @@ const GoogleMap = () => {
 export default GoogleMap;
 
 const Iframe = styled.iframe`
-  width: 90%;
+  width: 100%;
   height: 300px;
   filter: grayscale(100%);
   filter: gray;
