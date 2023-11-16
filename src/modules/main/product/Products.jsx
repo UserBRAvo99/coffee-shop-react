@@ -1,13 +1,15 @@
 import styled from "styled-components";
 import { fonts, theme } from "../../../utils/theme";
 import BtnGreen from "../../../shared/BtnGreen";
-import { dataDrink } from "../../../data/dataAboutProducts";
+import { useContext } from "react";
+import { ShopContext } from "../../../context/ShopProvider";
 
 const Products = () => {
+  const { numberOfProducts } = useContext(ShopContext);
   return (
     <Section className="container" id="shop">
       <List>
-        {dataDrink.map((coffee) => {
+        {numberOfProducts(4).map((coffee) => {
           return (
             <Item key={coffee.drink}>
               <Title>{coffee.drink}</Title>

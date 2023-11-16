@@ -1,4 +1,3 @@
-import { useSwiper } from "swiper/react";
 import {
   ArrowSliderNext,
   ArrowSliderPrev,
@@ -6,13 +5,12 @@ import {
 import styled from "styled-components";
 
 const CustomBtn = () => {
-  const swiper = useSwiper();
   return (
     <Wrapper>
-      <Btn onClick={() => swiper.slidePrev()}>
+      <Btn className="prev">
         <ArrowSliderPrev />
       </Btn>
-      <Btn onClick={() => swiper.slideNext()}>
+      <Btn className="next">
         <ArrowSliderNext />
       </Btn>
     </Wrapper>
@@ -23,7 +21,7 @@ export default CustomBtn;
 
 const Wrapper = styled.div`
   position: absolute;
-  width: 100%;
+  width: 110%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

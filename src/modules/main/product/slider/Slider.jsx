@@ -20,11 +20,11 @@ const Slider = () => {
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}
           slidesPerView={3}
-          // navigation
-          // pagination={{ clickable: true }}
-          // scrollbar={{ draggable: true }}
-          // onSwiper={(swiper) => console.log(swiper)}
-          // onSlideChange={() => console.log("slide change")}
+          loop={true}
+          navigation={{
+            prevEl: ".prev",
+            nextEl: ".next",
+          }}
         >
           {dataDrink.map((coffee) => {
             return (
@@ -43,8 +43,8 @@ const Slider = () => {
               </SwiperSlide>
             );
           })}
-          <CustomBtn />
         </Swiper>
+        <CustomBtn />
       </WrapperSlider>
     </Background>
   );

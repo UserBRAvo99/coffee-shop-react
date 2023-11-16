@@ -72,8 +72,7 @@ const CoffeeBox = styled.li`
 
 const SpanCoffeeBox = styled.span`
   color: ${theme.color.grey};
-  /* font-family: ${fonts.cedarville}; */
-  font-family: Cedarville Cursive;
+  font-family: ${fonts.cedarville.fontFamily};
   font-size: 72px;
 `;
 

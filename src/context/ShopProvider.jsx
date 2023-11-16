@@ -1,6 +1,7 @@
 import { createContext } from "react";
 import { useMediaQuery } from "react-responsive";
 import useMobileMenu from "./hooks/useMobileMenu";
+import { dataDrink } from "../data/dataAboutProducts";
 
 export const ShopContext = createContext();
 
@@ -14,6 +15,14 @@ export const ShopProvider = ({ children }) => {
   const isNoteScreenProducts = useMediaQuery({ query: "(max-width: 1023px)" });
   const isDeskScreen = useMediaQuery({ query: "(min-width: 1439px)" });
 
+  const numberOfProducts = (n) => {
+    const newArrProducts = [];
+    for (let i = 0; i < n; i++) {
+      newArrProducts.push(dataDrink[i]);
+    }
+    return newArrProducts;
+  };
+
   const value = {
     handleClickBtn,
     isOpen,
@@ -21,6 +30,7 @@ export const ShopProvider = ({ children }) => {
     isNoteScreen,
     isDeskScreen,
     isNoteScreenProducts,
+    numberOfProducts,
   };
   return <ShopContext.Provider value={value}>{children}</ShopContext.Provider>;
 };
