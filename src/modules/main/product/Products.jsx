@@ -5,11 +5,15 @@ import { useContext } from "react";
 import { ShopContext } from "../../../context/ShopProvider";
 
 const Products = () => {
-  const { numberOfProducts } = useContext(ShopContext);
+  const { numberOfProducts, isMobileScreen, isTabletScreenMin } =
+    useContext(ShopContext);
+  let number = 4;
+  if (isMobileScreen) number = 3;
+  if (isTabletScreenMin) number = 4;
   return (
     <Section className="container" id="shop">
       <List>
-        {numberOfProducts(4).map((coffee) => {
+        {numberOfProducts(number).map((coffee) => {
           return (
             <Item key={coffee.drink}>
               <Title>{coffee.drink}</Title>
@@ -31,16 +35,10 @@ const Products = () => {
 
 export default Products;
 
-const Section = styled.section`
-  padding-bottom: 96px;
-  @media screen and (min-width: 767px) {
-    padding-bottom: 131px;
-  }
-`;
+const Section = styled.section``;
 
 const List = styled.ul`
-  padding-bottom: 30px;
-  padding-top: 30px;
+  padding: 96px 0;
   @media screen and (min-width: 449px) {
     display: flex;
     flex-wrap: wrap;
@@ -50,6 +48,7 @@ const List = styled.ul`
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
+    padding: 131px 0;
   }
   @media screen and (min-width: 900px) {
     justify-content: space-around;

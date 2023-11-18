@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import OurAddressFooter from "../../../shared/OurAddressFooter";
-import { fonts, theme } from "../../../utils/theme";
-import BtnGreen from "../../../shared/BtnGreen";
-import { ArrowSvg } from "../../../shared/ArrowSvg";
+import OurAddressFooter from "../../shared/OurAddressFooter";
+import { fonts, theme } from "../../utils/theme";
+import BtnGreen from "../../shared/BtnGreen";
+import { ArrowSvg } from "../../shared/ArrowSvg";
 import GoogleMap from "./googleMap/GoogleMap";
 import { useContext } from "react";
-import { ShopContext } from "../../../context/ShopProvider";
+import { ShopContext } from "../../context/ShopProvider";
 
 const FooterShop = () => {
   const { isTabletScreen, isNoteScreen } = useContext(ShopContext);
