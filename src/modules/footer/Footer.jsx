@@ -8,7 +8,18 @@ import { useContext } from "react";
 import { ShopContext } from "../../context/ShopProvider";
 
 const FooterShop = () => {
-  const { isTabletScreen, isNoteScreen } = useContext(ShopContext);
+  const {
+    isTabletScreen,
+    isNoteScreen,
+    numberOfAddress,
+    isMobileScreen,
+    isTabletScreenMin,
+  } = useContext(ShopContext);
+
+  let number = 2;
+  if (isMobileScreen) number = 2;
+  if (isTabletScreenMin) number = 4;
+
   return (
     <Footer className="container">
       <List>
@@ -23,11 +34,7 @@ const FooterShop = () => {
         <Item>
           <WrapperAddress>
             <Title id="contacts">Our address</Title>
-            {isTabletScreen ? (
-              <OurAddressFooter number="2" />
-            ) : (
-              <OurAddressFooter number="4" />
-            )}
+            <OurAddressFooter address={numberOfAddress(number)} />
             {isTabletScreen && (
               <BtnGreen height="16px" width="18px" color={theme.color.white}>
                 <SpanBtn>See more address</SpanBtn>

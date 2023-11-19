@@ -1,16 +1,10 @@
 import styled from "styled-components";
-import { ourAddress } from "../data/dataAboutProducts";
 
-const OurAddressFooter = ({ number }) => {
-  const arr = [];
-  for (let index = 0; index < Number(number); index += 1) {
-    arr.push(ourAddress[index]);
-  }
-
+const OurAddressFooter = ({ address }) => {
   return (
     <List>
-      {arr.map((address) => {
-        return <Item key={address}>{address}</Item>;
+      {address.map((addressItem) => {
+        return <Item key={addressItem}>{addressItem}</Item>;
       })}
     </List>
   );

@@ -9,7 +9,7 @@ export const ShopProvider = ({ children }) => {
   // викликаю власний хук та деструктуризую його методи, які потім переношу в value. Щоб далі передати їх через Context по проекту.
   const { handleClickBtn, isOpen } = useMobileMenu();
 
-  const { numberOfProducts } = useQuantity();
+  const { numberOfProducts, numberOfAddress } = useQuantity();
 
   // медіа запити визначені за допомогою react-responsive , допомагає виконати рендер за умовою
   const isMobileScreen = useMediaQuery({ query: "(min-width: 320px)" });
@@ -30,6 +30,7 @@ export const ShopProvider = ({ children }) => {
     numberOfProducts,
     isMobileScreen,
     isTabletScreenMin,
+    numberOfAddress,
   };
   return <ShopContext.Provider value={value}>{children}</ShopContext.Provider>;
 };

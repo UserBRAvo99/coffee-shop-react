@@ -1,6 +1,13 @@
-import { dataDrink } from "../../data/dataAboutProducts";
+import { dataDrink, ourAddress } from "../../data/dataAboutProducts";
 
 const useQuantity = () => {
+  const numberOfAddress = (n) => {
+    const newArrAddress = [];
+    for (let i = 0; i < n; i += 1) {
+      newArrAddress.push(ourAddress[i]);
+    }
+    return newArrAddress;
+  };
   const numberOfProducts = (n) => {
     const newArrProducts = [];
     for (let i = 0; i < n; i += 1) {
@@ -8,7 +15,7 @@ const useQuantity = () => {
     }
     return newArrProducts;
   };
-  return { numberOfProducts };
+  return { numberOfProducts, numberOfAddress };
 };
 
 export default useQuantity;

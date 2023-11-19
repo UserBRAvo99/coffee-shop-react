@@ -53,7 +53,6 @@ const Link = styled.a`
     position: absolute;
     top: 14%;
     right: 14%;
-    /* transform: translate(0, -50%); */
     fill: ${theme.color.grey};
     width: 70%;
     height: 70%;
