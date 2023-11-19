@@ -1,8 +1,8 @@
+import styled from "styled-components";
 import {
   ArrowSliderNext,
   ArrowSliderPrev,
-} from "../../../../../shared/ArrowSlider";
-import styled from "styled-components";
+} from "../../../../../shared/img/ArrowSlider";
 
 const CustomBtn = () => {
   return (

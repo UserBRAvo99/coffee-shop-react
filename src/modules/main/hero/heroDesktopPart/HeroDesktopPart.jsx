@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { fonts, theme } from "../../../../utils/theme";
-import { ArrowSvg } from "../../../../shared/ArrowSvg";
-import CoffeeMakerHeroSvg from "../../../../shared/CoffeeMakerHeroSvg";
 import { useContext } from "react";
 import { ShopContext } from "../../../../context/ShopProvider";
 import SocFromHero from "../../../../shared/SocFromHero";
+import CoffeeMakerHeroSvg from "../../../../shared/img/CoffeeMakerHeroSvg";
+import { ArrowSvg } from "../../../../shared/img/ArrowSvg";
 
 const HeroDesktopPart = () => {
   const { isDeskScreen } = useContext(ShopContext);

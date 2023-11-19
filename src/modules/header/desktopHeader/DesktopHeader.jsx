@@ -1,20 +1,17 @@
 import styled from "styled-components";
 import { Link } from "react-scroll";
-import Logo from "../../../shared/Logo";
 import { fonts, theme } from "../../../utils/theme";
 import { dataMenuLink } from "../../../data/dataAboutProducts";
 import BtnGreen from "../../../shared/BtnGreen";
 import { useContext } from "react";
 import { ShopContext } from "../../../context/ShopProvider";
+import LogoAndTittle from "../../../shared/LogoAndTittle";
 
 const DesktopHeader = () => {
   const { isNoteScreen } = useContext(ShopContext);
   return (
     <Wrapper>
-      <WrapperTittle>
-        <Logo />
-        <Tittle>Samwayle</Tittle>
-      </WrapperTittle>
+      <LogoAndTittle />
       <WrapperNavBtn>
         <nav>
           <List>
@@ -55,22 +52,6 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 36px 0;
-`;
-
-const WrapperTittle = styled.div`
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-  & svg {
-    width: 56px;
-    height: 34px;
-  }
-`;
-
-const Tittle = styled.h1`
-  font-family: ${fonts.cedarville.fontFamily};
-  font-size: 32px;
-  font-weight: ${fonts.cedarville.fontWeight};
 `;
 
 const WrapperNavBtn = styled.div`

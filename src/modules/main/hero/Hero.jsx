@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import BtnGreen from "../../../shared/BtnGreen";
-import { ArrowSvg } from "../../../shared/ArrowSvg";
 import { fonts, theme } from "../../../utils/theme";
 import HeroDesktopPart from "./heroDesktopPart/HeroDesktopPart";
 import { useContext } from "react";
 import { ShopContext } from "../../../context/ShopProvider";
+import { ArrowSvg } from "../../../shared/img/ArrowSvg";
 
 const Hero = () => {
   const { isNoteScreen } = useContext(ShopContext);
