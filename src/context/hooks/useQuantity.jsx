@@ -1,6 +1,6 @@
 import { dataDrink } from "../../data/dataAboutProducts";
 
-const useProducts = () => {
+const useQuantity = () => {
   const numberOfProducts = (n) => {
     const newArrProducts = [];
     for (let i = 0; i < n; i += 1) {
@@ -11,4 +11,4 @@ const useProducts = () => {
   return { numberOfProducts };
 };
 
-export default useProducts;
+export default useQuantity;
