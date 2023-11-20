@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { theme, fonts } from "../../../utils/theme";
 import { Link } from "react-scroll";
 import { useContext } from "react";
@@ -7,9 +7,9 @@ import { dataMenuLink } from "../../../data/dataAboutProducts";
 import SocIcons from "../../../shared/SocIconsForMobileMenu";
 
 const MobileMenu = ({ children }) => {
-  const { handleClickBtn } = useContext(ShopContext);
+  const { handleClickBtn, isOpen } = useContext(ShopContext);
   return (
-    <Wrapper>
+    <Wrapper $isOpen={isOpen}>
       {children}
       <List>
         {dataMenuLink.map((item) => (
@@ -29,7 +29,7 @@ const MobileMenu = ({ children }) => {
         ))}
       </List>
       <SocIcons />
-      <DarkLine></DarkLine>
+      <DarkLine />
     </Wrapper>
   );
 };
@@ -47,6 +47,17 @@ const Wrapper = styled.div`
   background-color: ${theme.color.white};
   height: 100vh;
   width: 100vw;
+
+  transform: translate(0, -100vh);
+  transition: 500ms ease-in-out;
+  ${(props) => {
+    if (props.$isOpen) {
+      return css`
+        transform: translate(0, 0);
+        transition: 500ms ease-in-out;
+      `;
+    }
+  }}
 `;
 
 const List = styled.ul`

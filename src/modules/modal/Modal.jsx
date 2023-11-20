@@ -1,15 +1,15 @@
 import { useContext } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { ShopContext } from "../../context/ShopProvider";
 import LogoAndTittle from "../../shared/LogoAndTittle";
 import { AiOutlineClose } from "react-icons/ai";
 import SocIcons from "../../shared/SocIconsForMobileMenu";
 
 const Modal = () => {
-  const { modalHandleClick, content } = useContext(ShopContext);
-  console.log(content);
+  const { modalHandleClick, content, isOpenModal } = useContext(ShopContext);
+  // console.log(content);
   return (
-    <Wrapper onClick={modalHandleClick}>
+    <Wrapper onClick={modalHandleClick} $isOpen={isOpenModal}>
       <WrapperModal>
         <WrapperLogo>
           <LogoAndTittle />
@@ -37,6 +37,18 @@ const Wrapper = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: rgba(128, 128, 128, 0.6);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 500ms ease 0s;
+  ${(props) => {
+    if (props.$isOpen) {
+      return css`
+        visibility: visible;
+        opacity: 1;
+        transition: all 500ms ease 0s;
+      `;
+    }
+  }}
 `;
 
 const WrapperModal = styled.div`

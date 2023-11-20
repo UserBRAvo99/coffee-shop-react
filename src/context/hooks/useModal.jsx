@@ -6,7 +6,8 @@ export const useModal = () => {
   // стейт для модалки, початкове значення false - тобто закрита
   const [isOpenModal, setIsOpenModal] = useState(false);
   // стейт для контенту, який буде передаватись в модальне вікно
-  const [content, setContent] = useState();
+  const [content, setContent] = useState([]);
+
   // хук useEffect блокує скрол при відкритті модалки
   useEffect(() => {
     if (isOpenModal) {
