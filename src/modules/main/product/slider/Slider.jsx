@@ -38,13 +38,16 @@ const Slider = () => {
             return (
               <SwiperSlide key={coffee.drink}>
                 <WrapperDrink>
-                  <Title>{coffee.drink}</Title>
-                  <Info>{coffee.info}</Info>
+                  <div>
+                    <Title>{coffee.drink}</Title>
+                    <Info>{coffee.info}</Info>
+                  </div>
                   <div onClick={() => openModal(ourAddress)}>
                     <BtnGreen
                       height={"15px"}
                       width={"49px"}
                       color={theme.color.darkGreen}
+                      margin={true}
                     >
                       <Span>Add to cart</Span>
                     </BtnGreen>

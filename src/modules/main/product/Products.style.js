@@ -22,6 +22,7 @@ export const List = styled.ul`
 export const Item = styled.li`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding: 44px 47px 47px 47px;
   border-radius: 25px;
   background: ${theme.color.white};

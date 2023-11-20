@@ -24,3 +24,10 @@ export const WrapperImgDesk = styled.div`
     font-size: 28px;
   }
 `;
+export const WrapperBtn = styled.div`
+  padding-top: 24px;
+`;
+export const Span = styled.span`
+  font-family: ${fonts.alegreya.fontFamily};
+  font-size: 20px;
+`;

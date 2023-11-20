@@ -39,7 +39,12 @@ const FooterShop = () => {
             <OurAddressFooter address={numberOfAddress(number)} />
             {isTabletScreen && (
               <div onClick={() => openModal(ourAddress)}>
-                <BtnGreen height="16px" width="18px" color={theme.color.white}>
+                <BtnGreen
+                  height="16px"
+                  width="18px"
+                  color={theme.color.white}
+                  margin={true}
+                >
                   <SpanBtn>See more address</SpanBtn>
                   <ArrowSvg color={theme.color.black} />
                 </BtnGreen>

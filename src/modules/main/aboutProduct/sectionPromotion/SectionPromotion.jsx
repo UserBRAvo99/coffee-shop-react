@@ -1,4 +1,10 @@
-import { dataAboutProduct } from "../../../../data/dataAboutProducts";
+import { useContext } from "react";
+import {
+  dataAboutProduct,
+  ourAddress,
+} from "../../../../data/dataAboutProducts";
+import BtnGreen from "../../../../shared/BtnGreen";
+import { theme } from "../../../../utils/theme";
 import {
   Info,
   Item,
@@ -7,9 +13,11 @@ import {
   WrapperInfo,
   WrapperItem,
 } from "../generalStylesForAboutProducts.style";
-import { WrapperImgDesk } from "./sectionPromotion.style";
+import { Span, WrapperBtn, WrapperImgDesk } from "./SectionPromotion.style";
+import { ShopContext } from "../../../../context/ShopProvider";
 
 const SectionPromotion = ({ media }) => {
+  const { openModal, isDeskScreen } = useContext(ShopContext);
   return (
     <Item id="promotion">
       {media && (
@@ -35,6 +43,17 @@ const SectionPromotion = ({ media }) => {
               {dataAboutProduct[1].info.map((e) => {
                 return <Info key={e.length}>{e}</Info>;
               })}
+              {isDeskScreen && (
+                <WrapperBtn onClick={() => openModal(ourAddress)}>
+                  <BtnGreen
+                    height={"15px"}
+                    width={"49px"}
+                    color={theme.color.darkGreen}
+                  >
+                    <Span>Order now</Span>
+                  </BtnGreen>
+                </WrapperBtn>
+              )}
             </div>
           </WrapperItem>
         </WrapperInfo>

@@ -22,6 +22,7 @@ export const WrapperSlider = styled.div`
 export const WrapperDrink = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding: 30px 20px 30px 20px;
   border-radius: 25px;
   background: ${theme.color.white};
@@ -30,7 +31,13 @@ export const WrapperDrink = styled.div`
     margin-top: auto;
   }
   @media screen and (min-width: 1023px) {
-    height: 480px;
+    min-height: 505px;
+  }
+  @media screen and (min-width: 1100px) {
+    min-height: 450px;
+  }
+  @media screen and (min-width: 1300px) {
+    min-height: 420px;
   }
   @media screen and (min-width: 1439px) {
     padding: 44px 47px 47px 47px;

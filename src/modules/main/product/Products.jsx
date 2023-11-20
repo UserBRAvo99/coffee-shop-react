@@ -24,6 +24,7 @@ const Products = () => {
                   height={"15px"}
                   width={"49px"}
                   color={theme.color.darkGreen}
+                  margin={true}
                 >
                   <Span>Add to cart</Span>
                 </BtnGreen>
