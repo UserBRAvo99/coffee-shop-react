@@ -13,7 +13,7 @@ export default BtnGreen;
 
 const Btn = styled.button`
   display: block;
-
+  cursor: pointer;
   padding: ${(props) => props.height} ${(props) => props.width};
   align-items: center;
   color: ${theme.color.white};

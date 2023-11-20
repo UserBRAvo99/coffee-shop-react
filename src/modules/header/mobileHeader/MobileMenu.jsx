@@ -71,15 +71,9 @@ const Item = styled.li`
     font-family: ${fonts.josefin.fontFamily};
     font-size: 36px;
     font-weight: 500;
+    cursor: pointer;
   }
 `;
-// const LinkNav = styled.a`
-//   text-decoration: none;
-//   color: ${theme.color.black};
-//   font-family: ${fonts.josefin.fontFamily};
-//   font-size: 36px;
-//   font-weight: 500;
-// `;
 
 const DarkLine = styled.div`
   width: 134px;

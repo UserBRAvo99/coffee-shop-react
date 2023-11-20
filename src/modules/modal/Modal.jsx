@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { ShopContext } from "../../context/ShopProvider";
 import LogoAndTittle from "../../shared/LogoAndTittle";
 import { AiOutlineClose } from "react-icons/ai";
+import SocIcons from "../../shared/SocIconsForMobileMenu";
 
 const Modal = () => {
   const { modalHandleClick, content } = useContext(ShopContext);
@@ -14,11 +15,12 @@ const Modal = () => {
           <LogoAndTittle />
           <AiOutlineClose onClick={modalHandleClick} />
         </WrapperLogo>
-        <ul>
+        <List>
           {content.map((e) => {
             return <li key={e}>{e}</li>;
           })}
-        </ul>
+        </List>
+        <SocIcons />
       </WrapperModal>
     </Wrapper>
   );
@@ -37,14 +39,17 @@ const Wrapper = styled.div`
 
 const WrapperModal = styled.div`
   position: absolute;
-  width: 300px;
-  height: 300px;
+  width: 90%;
+  height: auto;
   background-color: white;
   border-radius: 5px;
   padding: 18px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  @media screen and (min-width: 430px) {
+    width: 400px;
+  }
 `;
 
 const WrapperLogo = styled.div`
@@ -52,4 +57,11 @@ const WrapperLogo = styled.div`
   width: 100%;
   justify-content: space-between;
   align-items: baseline;
+`;
+const List = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0 0 0;
 `;

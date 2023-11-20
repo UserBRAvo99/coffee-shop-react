@@ -5,13 +5,14 @@ import { ShopContext } from "../../../../context/ShopProvider";
 import SocFromHero from "../../../../shared/SocFromHero";
 import CoffeeMakerHeroSvg from "../../../../shared/img/CoffeeMakerHeroSvg";
 import { ArrowSvg } from "../../../../shared/img/ArrowSvg";
+import { ourAddress } from "../../../../data/dataAboutProducts";
 
 const HeroDesktopPart = () => {
-  const { isDeskScreen } = useContext(ShopContext);
+  const { isDeskScreen, openModal } = useContext(ShopContext);
   return (
     <>
       <List>
-        <ArrowBox>
+        <ArrowBox onClick={() => openModal(ourAddress)}>
           <ArrowSvg color={theme.color.black} />
         </ArrowBox>
         <CoffeeBox>
@@ -42,8 +43,8 @@ const ArrowBox = styled.li`
   position: relative;
   width: 159px;
   height: 157px;
-  background-color: ${theme.color.lightGreen};
-  opacity: 0.4;
+  background-color: rgba(227, 235, 231, 0.4);
+  cursor: pointer;
   & svg {
     position: absolute;
     top: 50%;

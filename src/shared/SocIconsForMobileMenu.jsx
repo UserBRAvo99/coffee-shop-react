@@ -49,6 +49,7 @@ const Link = styled.a`
   height: 45px;
   border: solid 2px ${theme.color.grey};
   border-radius: 50%;
+  cursor: pointer;
   svg {
     position: absolute;
     top: 14%;

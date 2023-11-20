@@ -34,4 +34,5 @@ const Wrapper = styled.div`
 const Btn = styled.button`
   border: transparent;
   background-color: transparent;
+  cursor: pointer;
 `;

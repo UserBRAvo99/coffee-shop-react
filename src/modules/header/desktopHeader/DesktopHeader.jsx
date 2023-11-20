@@ -63,6 +63,9 @@ const List = styled.ul`
   width: 400px;
   align-items: end;
   justify-content: space-between;
+  & a {
+    cursor: pointer;
+  }
   @media screen and (min-width: 1023px) {
     &:last-child {
       margin-right: 40px;
