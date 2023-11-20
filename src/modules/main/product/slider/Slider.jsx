@@ -1,18 +1,19 @@
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { dataDrink } from "../../../../data/dataAboutProducts";
+import { dataDrink, ourAddress } from "../../../../data/dataAboutProducts";
 import { fonts, theme } from "../../../../utils/theme";
 import styled from "styled-components";
 import BtnGreen from "../../../../shared/BtnGreen";
 import CustomBtn from "./customBtnFromSwiper/CustomBtn";
+import { useContext } from "react";
+import { ShopContext } from "../../../../context/ShopProvider";
 
 const Slider = () => {
+  const { openModal } = useContext(ShopContext);
   return (
     <Background>
       <WrapperSlider id="shop">
@@ -32,13 +33,15 @@ const Slider = () => {
                 <WrapperDrink>
                   <Title>{coffee.drink}</Title>
                   <Info>{coffee.info}</Info>
-                  <BtnGreen
-                    height={"15px"}
-                    width={"49px"}
-                    color={theme.color.darkGreen}
-                  >
-                    <Span>Add to cart</Span>
-                  </BtnGreen>
+                  <div onClick={() => openModal(ourAddress)}>
+                    <BtnGreen
+                      height={"15px"}
+                      width={"49px"}
+                      color={theme.color.darkGreen}
+                    >
+                      <Span>Add to cart</Span>
+                    </BtnGreen>
+                  </div>
                 </WrapperDrink>
               </SwiperSlide>
             );
