@@ -4,7 +4,7 @@ import { List } from "./aboutProduct.style";
 import SectionPromotion from "./sectionPromotion/SectionPromotion";
 
 import { ShopContext } from "../../../context/ShopProvider";
-import SectionAboutUs from "./sectionAboutUs/sectionAboutUs";
+import SectionAboutUs from "./sectionAboutUs/SectionAboutUs";
 
 const AboutProduct = () => {
   const { isNoteScreenProducts } = useContext(ShopContext);
