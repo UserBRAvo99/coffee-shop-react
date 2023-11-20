@@ -4,6 +4,9 @@ import {
   ArrowSliderPrev,
 } from "../../../../../shared/img/ArrowSlider";
 
+// кастомні кнопки для слайдера Swiper
+// на кастомні кнопки навішуємо відповідний клас className="prev" та className="next", щоб зв'язати їх з слайдером.
+
 const CustomBtn = () => {
   return (
     <Wrapper>

@@ -32,7 +32,7 @@ export default SocIcons;
 const Wrapper = styled.div`
   display: flex;
   width: 100%;
-  padding: 40px 0 40px 0;
+  padding: 40px 0 80px 0;
   justify-content: center;
 `;
 
