@@ -13,7 +13,9 @@ const Modal = () => {
       <WrapperModal>
         <WrapperLogo>
           <LogoAndTittle />
-          <AiOutlineClose onClick={modalHandleClick} />
+          <WrapperCloseBtn>
+            <AiOutlineClose onClick={modalHandleClick} />
+          </WrapperCloseBtn>
         </WrapperLogo>
         <List>
           {content.map((e) => {
@@ -58,6 +60,12 @@ const WrapperLogo = styled.div`
   justify-content: space-between;
   align-items: baseline;
 `;
+
+const WrapperCloseBtn = styled.div`
+  padding: 10px;
+  cursor: pointer;
+`;
+
 const List = styled.div`
   display: flex;
   flex-direction: column;

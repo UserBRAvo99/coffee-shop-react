@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import { Link } from "react-scroll";
 import { fonts, theme } from "../../../utils/theme";
-import { dataMenuLink } from "../../../data/dataAboutProducts";
+import { dataMenuLink, ourAddress } from "../../../data/dataAboutProducts";
 import BtnGreen from "../../../shared/BtnGreen";
 import { useContext } from "react";
 import { ShopContext } from "../../../context/ShopProvider";
 import LogoAndTittle from "../../../shared/LogoAndTittle";
 
 const DesktopHeader = () => {
-  const { isNoteScreen } = useContext(ShopContext);
+  const { isNoteScreen, openModal } = useContext(ShopContext);
   return (
     <Wrapper>
       <LogoAndTittle />
@@ -35,9 +35,15 @@ const DesktopHeader = () => {
           </List>
         </nav>
         {isNoteScreen && (
-          <BtnGreen height="14px" width="32px" color={theme.color.darkGreen}>
-            <span>Contact Us</span>
-          </BtnGreen>
+          <div
+            onClick={() => {
+              openModal(ourAddress);
+            }}
+          >
+            <BtnGreen height="14px" width="32px" color={theme.color.darkGreen}>
+              <span>Contact Us</span>
+            </BtnGreen>
+          </div>
         )}
       </WrapperNavBtn>
     </Wrapper>
