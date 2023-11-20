@@ -2,14 +2,24 @@ import { createContext } from "react";
 import { useMediaQuery } from "react-responsive";
 import useMobileMenu from "./hooks/useMobileMenu";
 import useQuantity from "./hooks/useQuantity";
+import { useModal } from "./hooks/useModal";
 // ініціалізація контексту (не забуваємо огорнути компоненти в провайдер)
 export const ShopContext = createContext();
 // контекст)
 export const ShopProvider = ({ children }) => {
   // викликаю власний хук та деструктуризую його методи, які потім переношу в value. Щоб далі передати їх через Context по проекту.
   const { handleClickBtn, isOpen } = useMobileMenu();
-
+  //  функція яка повертає кількість відрендерених елементів відносно умови(розміру екрана)
   const { numberOfProducts, numberOfAddress } = useQuantity();
+  //  модалка
+  const {
+    modalButtonClose,
+    openModal,
+    content,
+    modalHandleClick,
+    isOpenModal,
+    toggleModal,
+  } = useModal();
 
   // медіа запити визначені за допомогою react-responsive , допомагає виконати рендер за умовою
   const isMobileScreen = useMediaQuery({ query: "(min-width: 320px)" });
@@ -31,6 +41,12 @@ export const ShopProvider = ({ children }) => {
     isMobileScreen,
     isTabletScreenMin,
     numberOfAddress,
+    modalButtonClose,
+    openModal,
+    content,
+    modalHandleClick,
+    isOpenModal,
+    toggleModal,
   };
   return <ShopContext.Provider value={value}>{children}</ShopContext.Provider>;
 };

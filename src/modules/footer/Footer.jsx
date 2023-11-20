@@ -6,6 +6,7 @@ import { ArrowSvg } from "../../shared/img/ArrowSvg";
 import GoogleMap from "./googleMap/GoogleMap";
 import { useContext } from "react";
 import { ShopContext } from "../../context/ShopProvider";
+import { ourAddress } from "../../data/dataAboutProducts";
 
 const FooterShop = () => {
   const {
@@ -14,6 +15,7 @@ const FooterShop = () => {
     numberOfAddress,
     isMobileScreen,
     isTabletScreenMin,
+    openModal,
   } = useContext(ShopContext);
 
   let number = 2;
@@ -36,10 +38,12 @@ const FooterShop = () => {
             <Title id="contacts">Our address</Title>
             <OurAddressFooter address={numberOfAddress(number)} />
             {isTabletScreen && (
-              <BtnGreen height="16px" width="18px" color={theme.color.white}>
-                <SpanBtn>See more address</SpanBtn>
-                <ArrowSvg color={theme.color.black} />
-              </BtnGreen>
+              <div onClick={() => openModal(ourAddress)}>
+                <BtnGreen height="16px" width="18px" color={theme.color.white}>
+                  <SpanBtn>See more address</SpanBtn>
+                  <ArrowSvg color={theme.color.black} />
+                </BtnGreen>
+              </div>
             )}
           </WrapperAddress>
         </Item>

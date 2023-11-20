@@ -3,9 +3,10 @@ import { fonts, theme } from "../../../utils/theme";
 import BtnGreen from "../../../shared/BtnGreen";
 import { useContext } from "react";
 import { ShopContext } from "../../../context/ShopProvider";
+import { ourAddress } from "../../../data/dataAboutProducts";
 
 const Products = () => {
-  const { numberOfProducts, isMobileScreen, isTabletScreenMin } =
+  const { numberOfProducts, isMobileScreen, isTabletScreenMin, openModal } =
     useContext(ShopContext);
   let number = 4;
   if (isMobileScreen) number = 3;
@@ -18,13 +19,15 @@ const Products = () => {
             <Item key={coffee.drink}>
               <Title>{coffee.drink}</Title>
               <Info>{coffee.info}</Info>
-              <BtnGreen
-                height={"15px"}
-                width={"49px"}
-                color={theme.color.darkGreen}
-              >
-                <Span>Add to cart</Span>
-              </BtnGreen>
+              <div onClick={() => openModal(ourAddress)}>
+                <BtnGreen
+                  height={"15px"}
+                  width={"49px"}
+                  color={theme.color.darkGreen}
+                >
+                  <Span>Add to cart</Span>
+                </BtnGreen>
+              </div>
             </Item>
           );
         })}

@@ -5,18 +5,25 @@ import HeroDesktopPart from "./heroDesktopPart/HeroDesktopPart";
 import { useContext } from "react";
 import { ShopContext } from "../../../context/ShopProvider";
 import { ArrowSvg } from "../../../shared/img/ArrowSvg";
+import { ourAddress } from "../../../data/dataAboutProducts";
 
 const Hero = () => {
-  const { isNoteScreen } = useContext(ShopContext);
+  const { isNoteScreen, openModal } = useContext(ShopContext);
   return (
     <HeroWrapper className="container">
       <Wrapper id="home">
         <Slogan>Drink coffee, enjoy with Samwyle</Slogan>
         <Title>Coffee Shop</Title>
-        <BtnGreen height={"16px"} width={"18px"} color={theme.color.darkGreen}>
-          <Span>Order Here</Span>
-          <ArrowSvg color={theme.color.white} />
-        </BtnGreen>
+        <div onClick={() => openModal(ourAddress)}>
+          <BtnGreen
+            height={"16px"}
+            width={"18px"}
+            color={theme.color.darkGreen}
+          >
+            <Span>Order Here</Span>
+            <ArrowSvg color={theme.color.white} />
+          </BtnGreen>
+        </div>
       </Wrapper>
       {isNoteScreen && <HeroDesktopPart />}
     </HeroWrapper>
