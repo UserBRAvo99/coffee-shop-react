@@ -49,7 +49,6 @@ const SectionPromotion = ({ media }) => {
                     height={"15px"}
                     width={"49px"}
                     color={theme.color.darkGreen}
-                    margin={false}
                   >
                     <Span>Order now</Span>
                   </BtnGreen>
