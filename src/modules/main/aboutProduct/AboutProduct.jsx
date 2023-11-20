@@ -1,8 +1,8 @@
 import { useContext } from "react";
+import { List } from "./aboutProduct.style";
 import { ShopContext } from "../../../context/ShopProvider";
 import SectionAboutUs from "./sectionAboutUs/sectionAboutUs";
 import SectionPromotion from "./sectionPromotion/SectionPromotion";
-import { List } from "./aboutProduct.style";
 
 const AboutProduct = () => {
   const { isNoteScreenProducts } = useContext(ShopContext);

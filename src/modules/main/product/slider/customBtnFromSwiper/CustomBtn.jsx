@@ -1,8 +1,8 @@
-import styled from "styled-components";
 import {
   ArrowSliderNext,
   ArrowSliderPrev,
 } from "../../../../../shared/img/ArrowSlider";
+import { Btn, Wrapper } from "./CustomBtn.style";
 
 // кастомні кнопки для слайдера Swiper
 // на кастомні кнопки навішуємо відповідний клас className="prev" та className="next", щоб зв'язати їх з слайдером.
@@ -21,21 +21,3 @@ const CustomBtn = () => {
 };
 
 export default CustomBtn;
-
-const Wrapper = styled.div`
-  position: absolute;
-  width: 110%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 5;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-`;
-
-const Btn = styled.button`
-  border: transparent;
-  background-color: transparent;
-  cursor: pointer;
-`;

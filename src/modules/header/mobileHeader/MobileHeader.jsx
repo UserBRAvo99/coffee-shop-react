@@ -11,7 +11,6 @@ const MobileHeader = () => {
       <MobileLogoBtn open={handleClickBtn}>
         <AiOutlineMenu />
       </MobileLogoBtn>
-
       <MobileMenu>
         <MobileLogoBtn open={handleClickBtn}>
           <AiOutlineClose />
