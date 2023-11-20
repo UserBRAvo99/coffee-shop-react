@@ -54,6 +54,14 @@ const Slogan = styled.p`
     font-size: 28px;
     margin-bottom: 40px;
   }
+  @media screen and (min-width: 1023px) {
+    font-size: 22px;
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: 1110px) {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
 `;
 
 const Title = styled.h2`
