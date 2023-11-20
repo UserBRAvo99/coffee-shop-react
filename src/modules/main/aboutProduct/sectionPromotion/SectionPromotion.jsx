@@ -13,7 +13,9 @@ import {
   WrapperInfo,
   WrapperItem,
 } from "../generalStylesForAboutProducts.style";
-import { Span, WrapperBtn, WrapperImgDesk } from "./SectionPromotion.style";
+
+import { Span, WrapperBtn, WrapperImgDesk } from "./sectionPromotion.style";
+
 import { ShopContext } from "../../../../context/ShopProvider";
 
 const SectionPromotion = ({ media }) => {
