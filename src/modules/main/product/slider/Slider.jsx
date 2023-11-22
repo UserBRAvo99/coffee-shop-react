@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { ShopContext } from "../../../../context/ShopProvider";
 
-import BtnTemplate from "../../../../shared/btnTemplate/btnTemplate";
+import BtnTemplate from "../../../../shared/btnTemplate/BtnTemplate";
 import CustomBtn from "./customBtnFromSwiper/CustomBtn";
 import {
   dataDrink,

@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { ShopContext } from "../../../context/ShopProvider";
 
 import { theme } from "../../../utils/theme";
-import BtnTemplate from "../../../shared/btnTemplate/btnTemplate";
+import BtnTemplate from "../../../shared/btnTemplate/BtnTemplate";
 import { ourAddress } from "../../../assets/data/dataAboutProducts";
 
 import { Info, Item, List, Span, Title } from "./Products.style";

@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { ShopContext } from "../../../context/ShopProvider";
 
 import { Link } from "react-scroll";
-import BtnTemplate from "../../../shared/btnTemplate/btnTemplate";
+import BtnTemplate from "../../../shared/btnTemplate/BtnTemplate";
 import LogoAndTittle from "../../../shared/LogoAndTittle";
 import {
   dataMenuLink,

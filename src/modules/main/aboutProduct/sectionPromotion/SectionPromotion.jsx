@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { ShopContext } from "../../../../context/ShopProvider";
 
-import BtnTemplate from "../../../../shared/btnTemplate/btnTemplate";
+import BtnTemplate from "../../../../shared/btnTemplate/BtnTemplate";
 import {
   dataAboutProduct,
   ourAddress,
