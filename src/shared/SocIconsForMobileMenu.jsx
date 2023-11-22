@@ -51,6 +51,7 @@ const Link = styled.a`
   height: 45px;
   border: solid 2px ${theme.color.grey};
   border-radius: 50%;
+  transition: all 500ms ease 0s;
   cursor: pointer;
   svg {
     position: absolute;
@@ -63,6 +64,8 @@ const Link = styled.a`
   &:hover,
   &:focus {
     border-color: ${theme.color.darkGreen};
+    box-shadow: 0px 1px 25px 8px rgba(45, 99, 94, 0.5);
+    transition: all 500ms ease 0s;
     svg {
       fill: ${theme.color.darkGreen};
     }

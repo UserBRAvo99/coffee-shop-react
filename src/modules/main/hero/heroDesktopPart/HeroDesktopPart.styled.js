@@ -22,6 +22,12 @@ export const ArrowBox = styled.li`
     transform: translate(-50%, -50%);
     opacity: 1;
   }
+  transition: all 500ms ease 0s;
+  &:hover,
+  &:focus {
+    box-shadow: -1px 1px 37px 33px rgba(45, 99, 94, 0.51) inset;
+    transition: all 500ms ease 0s;
+  }
 `;
 
 export const CoffeeBox = styled.li`

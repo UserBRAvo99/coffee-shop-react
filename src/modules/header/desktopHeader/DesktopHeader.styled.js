@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fonts } from "../../../utils/theme";
+import { fonts, theme } from "../../../utils/theme";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -18,9 +18,29 @@ export const List = styled.ul`
   width: 400px;
   align-items: end;
   justify-content: space-between;
-  & a {
+  /* стилі для посилань */
+  a {
+    position: relative;
     cursor: pointer;
+    /* ховер і фокус для смужки під посиланням */
+    &:hover::before,
+    &:focus::before {
+      width: 100%;
+      transition: all 500ms ease 0s;
+    }
   }
+  /* стилі для смужки/підкреслення під посиланням */
+  a::before {
+    content: "";
+    transition: all 500ms ease 0s;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 1.5px;
+    background-color: ${theme.color.darkGreen};
+  }
+
   @media screen and (min-width: 1023px) {
     &:last-child {
       margin-right: 40px;
