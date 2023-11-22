@@ -1,7 +1,9 @@
 import styled from "styled-components";
-import { fonts, theme } from "../utils/theme";
+
 import { AiFillInstagram, AiOutlineTwitter } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
+
+import { fonts, theme } from "../utils/theme";
 
 const SocFromHero = () => {
   return (

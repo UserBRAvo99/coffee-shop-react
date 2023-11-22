@@ -1,9 +1,11 @@
-import BtnGreen from "../../../shared/BtnGreen";
-import HeroDesktopPart from "./heroDesktopPart/HeroDesktopPart";
 import { useContext } from "react";
 import { ShopContext } from "../../../context/ShopProvider";
+
+import BtnGreen from "../../../shared/BtnGreen";
+import HeroDesktopPart from "./heroDesktopPart/HeroDesktopPart";
 import { ArrowSvg } from "../../../shared/img/ArrowSvg";
 import { ourAddress } from "../../../data/dataAboutProducts";
+
 import { HeroWrapper, Slogan, Span, Title, Wrapper } from "./Hero.styled";
 import { theme } from "../../../utils/theme";
 

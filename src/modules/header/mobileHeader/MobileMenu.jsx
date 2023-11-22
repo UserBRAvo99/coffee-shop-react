@@ -1,8 +1,10 @@
-import { Link } from "react-scroll";
 import { useContext } from "react";
 import { ShopContext } from "../../../context/ShopProvider";
+
+import { Link } from "react-scroll";
 import { dataMenuLink } from "../../../data/dataAboutProducts";
 import SocIcons from "../../../shared/SocIconsForMobileMenu";
+
 import { DarkLine, Item, List, Wrapper } from "../../footer/Footer.style";
 
 const MobileMenu = ({ children }) => {

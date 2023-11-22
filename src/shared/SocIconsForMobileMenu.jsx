@@ -1,6 +1,8 @@
 import styled from "styled-components";
+
 import { FaFacebookF } from "react-icons/fa";
 import { AiFillInstagram, AiOutlineTwitter } from "react-icons/ai";
+
 import { theme } from "../utils/theme";
 
 const SocIcons = () => {

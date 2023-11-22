@@ -1,4 +1,5 @@
 import { dataAboutProduct } from "../../../../data/dataAboutProducts";
+
 import {
   Info,
   Item,

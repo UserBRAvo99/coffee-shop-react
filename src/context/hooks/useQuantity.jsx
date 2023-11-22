@@ -1,4 +1,4 @@
-import { dataDrink, ourAddress } from "../../data/dataAboutProducts";
+import { dataDrink, ourAddress } from "../../assets/data/dataAboutProducts";
 
 const useQuantity = () => {
   const numberOfAddress = (n) => {

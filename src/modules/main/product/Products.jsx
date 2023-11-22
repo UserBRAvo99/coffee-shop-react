@@ -1,8 +1,10 @@
-import { theme } from "../../../utils/theme";
-import BtnGreen from "../../../shared/BtnGreen";
 import { useContext } from "react";
 import { ShopContext } from "../../../context/ShopProvider";
+
+import { theme } from "../../../utils/theme";
+import BtnGreen from "../../../shared/BtnGreen";
 import { ourAddress } from "../../../data/dataAboutProducts";
+
 import { Info, Item, List, Span, Title } from "./Products.style";
 
 const Products = () => {

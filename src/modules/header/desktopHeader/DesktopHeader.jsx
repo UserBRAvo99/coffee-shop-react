@@ -1,9 +1,11 @@
-import { Link } from "react-scroll";
-import { dataMenuLink, ourAddress } from "../../../data/dataAboutProducts";
-import BtnGreen from "../../../shared/BtnGreen";
 import { useContext } from "react";
 import { ShopContext } from "../../../context/ShopProvider";
+
+import { Link } from "react-scroll";
+import BtnGreen from "../../../shared/BtnGreen";
 import LogoAndTittle from "../../../shared/LogoAndTittle";
+import { dataMenuLink, ourAddress } from "../../../data/dataAboutProducts";
+
 import { theme } from "../../../utils/theme";
 import { Item, List, Wrapper, WrapperNavBtn } from "./DesktopHeader.styled";
 

@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import { ShopContext } from "../../context/ShopProvider";
+
 import LogoAndTittle from "../../shared/LogoAndTittle";
 import { AiOutlineClose } from "react-icons/ai";
 import SocIcons from "../../shared/SocIconsForMobileMenu";
+
 import {
   List,
   Wrapper,

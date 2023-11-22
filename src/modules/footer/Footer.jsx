@@ -1,12 +1,14 @@
 import styled from "styled-components";
-import OurAddressFooter from "../../shared/OurAddressFooter";
-import { fonts, theme } from "../../utils/theme";
-import BtnGreen from "../../shared/BtnGreen";
-import { ArrowSvg } from "../../shared/img/ArrowSvg";
-import GoogleMap from "./googleMap/GoogleMap";
 import { useContext } from "react";
 import { ShopContext } from "../../context/ShopProvider";
+
+import GoogleMap from "./googleMap/GoogleMap";
 import { ourAddress } from "../../data/dataAboutProducts";
+import OurAddressFooter from "../../shared/OurAddressFooter";
+import BtnGreen from "../../shared/BtnGreen";
+import { ArrowSvg } from "../../shared/img/ArrowSvg";
+
+import { fonts, theme } from "../../utils/theme";
 
 const FooterShop = () => {
   const {

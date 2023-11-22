@@ -1,6 +1,8 @@
 import styled from "styled-components";
-import { fonts } from "../utils/theme";
+
 import Logo from "./img/Logo";
+
+import { fonts } from "../utils/theme";
 
 const LogoAndTittle = () => {
   return (

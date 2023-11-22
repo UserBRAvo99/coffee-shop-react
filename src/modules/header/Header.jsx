@@ -1,7 +1,8 @@
-import styled from "styled-components";
-import MobileHeader from "./mobileHeader/MobileHeader";
 import { useContext } from "react";
+import styled from "styled-components";
 import { ShopContext } from "../../context/ShopProvider";
+
+import MobileHeader from "./mobileHeader/MobileHeader";
 import DesktopHeader from "./desktopHeader/DesktopHeader";
 
 const Header = () => {

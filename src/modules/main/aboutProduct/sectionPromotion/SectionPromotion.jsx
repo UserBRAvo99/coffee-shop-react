@@ -1,9 +1,12 @@
 import { useContext } from "react";
+import { ShopContext } from "../../../../context/ShopProvider";
+
+import BtnGreen from "../../../../shared/BtnGreen";
 import {
   dataAboutProduct,
   ourAddress,
-} from "../../../../data/dataAboutProducts";
-import BtnGreen from "../../../../shared/BtnGreen";
+} from "../../../../assets/data/dataAboutProducts";
+
 import { theme } from "../../../../utils/theme";
 import {
   Info,
@@ -13,10 +16,7 @@ import {
   WrapperInfo,
   WrapperItem,
 } from "../generalStylesForAboutProducts.style";
-
 import { Span, WrapperBtn, WrapperImgDesk } from "./sectionPromotion.style";
-
-import { ShopContext } from "../../../../context/ShopProvider";
 
 const SectionPromotion = ({ media }) => {
   const { openModal, isDeskScreen } = useContext(ShopContext);
