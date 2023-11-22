@@ -11,7 +11,8 @@ export const ShopProvider = ({ children }) => {
   // викликаю власний хук та деструктуризую його методи, які потім переношу в value. Щоб далі передати їх через Context по проекту.
   const { handleClickBtn, isOpen } = useMobileMenu();
   //  функція яка повертає кількість відрендерених елементів відносно умови(розміру екрана)
-  const { numberOfProducts, numberOfAddress } = useQuantity();
+  const { numberOfProducts, numberOfAddress, numberProducts, number } =
+    useQuantity();
   // медіа запити
   const {
     isTabletScreen,
@@ -50,6 +51,8 @@ export const ShopProvider = ({ children }) => {
     modalHandleClick,
     isOpenModal,
     toggleModal,
+    numberProducts,
+    number,
   };
   return <ShopContext.Provider value={value}>{children}</ShopContext.Provider>;
 };

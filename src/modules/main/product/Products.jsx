@@ -8,11 +8,8 @@ import { ourAddress } from "../../../assets/data/dataAboutProducts";
 import { Info, Item, List, Span, Title } from "./Products.style";
 
 const Products = () => {
-  const { numberOfProducts, isMobileScreen, isTabletScreenMin, openModal } =
-    useContext(ShopContext);
-  let number = 4;
-  if (isMobileScreen) number = 3;
-  if (isTabletScreenMin) number = 4;
+  const { numberOfProducts, openModal, number } = useContext(ShopContext);
+
   return (
     <section className="container" id="shop">
       <List>
