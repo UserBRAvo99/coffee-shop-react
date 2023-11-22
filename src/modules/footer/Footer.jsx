@@ -6,7 +6,7 @@ import GoogleMap from "./googleMap/GoogleMap";
 import { ourAddress } from "../../assets/data/dataAboutProducts";
 import OurAddressFooter from "../../shared/OurAddressFooter";
 import { ArrowSvg } from "../../shared/img/ArrowSvg";
-import BtnTemplate from "../../shared/btnTemplate/btnTemplate";
+import BtnTemplate from "../../shared/btnTemplate/BtnTemplate";
 
 import { fonts, theme } from "../../utils/theme";
 
