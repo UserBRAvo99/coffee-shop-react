@@ -1,18 +1,8 @@
 import styled from "styled-components";
 
-import { theme } from "../utils/theme";
+import { theme } from "../../utils/theme";
 
-const BtnGreen = ({ height, width, color, margin, children }) => {
-  return (
-    <Btn $height={height} $width={width} $color={color} $margin={margin}>
-      {children}
-    </Btn>
-  );
-};
-
-export default BtnGreen;
-
-const Btn = styled.button`
+export const Btn = styled.button`
   display: block;
   cursor: pointer;
   padding: ${(props) => props.$height} ${(props) => props.$width};

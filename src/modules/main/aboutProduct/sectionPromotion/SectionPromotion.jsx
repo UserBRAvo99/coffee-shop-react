@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { ShopContext } from "../../../../context/ShopProvider";
 
-import BtnGreen from "../../../../shared/BtnGreen";
+import BtnTemplate from "../../../../shared/btnTemplate/btnTemplate";
 import {
   dataAboutProduct,
   ourAddress,
@@ -47,13 +47,13 @@ const SectionPromotion = ({ media }) => {
               })}
               {isDeskScreen && (
                 <WrapperBtn onClick={() => openModal(ourAddress)}>
-                  <BtnGreen
+                  <BtnTemplate
                     height={"15px"}
                     width={"49px"}
                     color={theme.color.darkGreen}
                   >
                     <Span>Order now</Span>
-                  </BtnGreen>
+                  </BtnTemplate>
                 </WrapperBtn>
               )}
             </div>

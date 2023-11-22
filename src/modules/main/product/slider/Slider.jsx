@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { ShopContext } from "../../../../context/ShopProvider";
 
-import BtnGreen from "../../../../shared/BtnGreen";
+import BtnTemplate from "../../../../shared/btnTemplate/btnTemplate";
 import CustomBtn from "./customBtnFromSwiper/CustomBtn";
 import {
   dataDrink,
@@ -49,14 +49,14 @@ const Slider = () => {
                     <Info>{coffee.info}</Info>
                   </div>
                   <div onClick={() => openModal(ourAddress)}>
-                    <BtnGreen
+                    <BtnTemplate
                       height={"15px"}
                       width={"49px"}
                       color={theme.color.darkGreen}
                       margin={true}
                     >
                       <Span>Add to cart</Span>
-                    </BtnGreen>
+                    </BtnTemplate>
                   </div>
                 </WrapperDrink>
               </SwiperSlide>

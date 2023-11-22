@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { ShopContext } from "../../../context/ShopProvider";
 
 import { Link } from "react-scroll";
-import BtnGreen from "../../../shared/BtnGreen";
+import BtnTemplate from "../../../shared/btnTemplate/btnTemplate";
 import LogoAndTittle from "../../../shared/LogoAndTittle";
 import {
   dataMenuLink,
@@ -45,9 +45,13 @@ const DesktopHeader = () => {
               openModal(ourAddress);
             }}
           >
-            <BtnGreen height="14px" width="32px" color={theme.color.darkGreen}>
+            <BtnTemplate
+              height="14px"
+              width="32px"
+              color={theme.color.darkGreen}
+            >
               <span>Contact Us</span>
-            </BtnGreen>
+            </BtnTemplate>
           </div>
         )}
       </WrapperNavBtn>

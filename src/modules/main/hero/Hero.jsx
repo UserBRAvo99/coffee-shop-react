@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { ShopContext } from "../../../context/ShopProvider";
 
-import BtnGreen from "../../../shared/BtnGreen";
+import BtnTemplate from "../../../shared/btnTemplate/btnTemplate";
 import HeroDesktopPart from "./heroDesktopPart/HeroDesktopPart";
 import { ArrowSvg } from "../../../shared/img/ArrowSvg";
 import { ourAddress } from "../../../assets/data/dataAboutProducts";
@@ -17,14 +17,14 @@ const Hero = () => {
         <Slogan>Drink coffee, enjoy with Samwyle</Slogan>
         <Title>Coffee Shop</Title>
         <div onClick={() => openModal(ourAddress)}>
-          <BtnGreen
+          <BtnTemplate
             height={"16px"}
             width={"18px"}
             color={theme.color.darkGreen}
           >
             <Span>Order Here</Span>
             <ArrowSvg color={theme.color.white} />
-          </BtnGreen>
+          </BtnTemplate>
         </div>
       </Wrapper>
       {isNoteScreen && <HeroDesktopPart />}

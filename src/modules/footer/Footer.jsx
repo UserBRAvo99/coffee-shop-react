@@ -5,8 +5,8 @@ import { ShopContext } from "../../context/ShopProvider";
 import GoogleMap from "./googleMap/GoogleMap";
 import { ourAddress } from "../../assets/data/dataAboutProducts";
 import OurAddressFooter from "../../shared/OurAddressFooter";
-import BtnGreen from "../../shared/BtnGreen";
 import { ArrowSvg } from "../../shared/img/ArrowSvg";
+import BtnTemplate from "../../shared/btnTemplate/btnTemplate";
 
 import { fonts, theme } from "../../utils/theme";
 
@@ -41,7 +41,7 @@ const FooterShop = () => {
             <OurAddressFooter address={numberOfAddress(number)} />
             {isTabletScreen && (
               <div onClick={() => openModal(ourAddress)}>
-                <BtnGreen
+                <BtnTemplate
                   height="16px"
                   width="18px"
                   color={theme.color.white}
@@ -49,7 +49,7 @@ const FooterShop = () => {
                 >
                   <SpanBtn>See more address</SpanBtn>
                   <ArrowSvg color={theme.color.black} />
-                </BtnGreen>
+                </BtnTemplate>
               </div>
             )}
           </WrapperAddress>

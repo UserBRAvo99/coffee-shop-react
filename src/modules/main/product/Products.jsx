@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { ShopContext } from "../../../context/ShopProvider";
 
 import { theme } from "../../../utils/theme";
-import BtnGreen from "../../../shared/BtnGreen";
+import BtnTemplate from "../../../shared/btnTemplate/btnTemplate";
 import { ourAddress } from "../../../assets/data/dataAboutProducts";
 
 import { Info, Item, List, Span, Title } from "./Products.style";
@@ -22,14 +22,14 @@ const Products = () => {
               <Title>{coffee.drink}</Title>
               <Info>{coffee.info}</Info>
               <div onClick={() => openModal(ourAddress)}>
-                <BtnGreen
+                <BtnTemplate
                   height={"15px"}
                   width={"49px"}
                   color={theme.color.darkGreen}
                   margin={true}
                 >
                   <Span>Add to cart</Span>
-                </BtnGreen>
+                </BtnTemplate>
               </div>
             </Item>
           );
