@@ -4,7 +4,7 @@ import { ShopContext } from "../../../../context/ShopProvider";
 import SocFromHero from "../../../../shared/SocFromHero";
 import CoffeeMakerHeroSvg from "../../../../shared/img/CoffeeMakerHeroSvg";
 import { ArrowSvg } from "../../../../shared/img/ArrowSvg";
-import { ourAddress } from "../../../../data/dataAboutProducts";
+import { ourAddress } from "../../../../assets/data/dataAboutProducts";
 
 import { theme } from "../../../../utils/theme";
 import {

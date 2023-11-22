@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { ShopContext } from "../../context/ShopProvider";
 
 import GoogleMap from "./googleMap/GoogleMap";
-import { ourAddress } from "../../data/dataAboutProducts";
+import { ourAddress } from "../../assets/data/dataAboutProducts";
 import OurAddressFooter from "../../shared/OurAddressFooter";
 import BtnGreen from "../../shared/BtnGreen";
 import { ArrowSvg } from "../../shared/img/ArrowSvg";

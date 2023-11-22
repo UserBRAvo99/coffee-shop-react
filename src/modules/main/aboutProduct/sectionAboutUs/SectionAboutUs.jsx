@@ -1,4 +1,4 @@
-import { dataAboutProduct } from "../../../../data/dataAboutProducts";
+import { dataAboutProduct } from "../../../../assets/data/dataAboutProducts";
 
 import {
   Info,

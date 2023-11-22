@@ -4,7 +4,10 @@ import { ShopContext } from "../../../../context/ShopProvider";
 
 import BtnGreen from "../../../../shared/BtnGreen";
 import CustomBtn from "./customBtnFromSwiper/CustomBtn";
-import { dataDrink, ourAddress } from "../../../../data/dataAboutProducts";
+import {
+  dataDrink,
+  ourAddress,
+} from "../../../../assets/data/dataAboutProducts";
 
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import "swiper/css";

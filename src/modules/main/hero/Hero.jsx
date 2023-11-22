@@ -4,7 +4,7 @@ import { ShopContext } from "../../../context/ShopProvider";
 import BtnGreen from "../../../shared/BtnGreen";
 import HeroDesktopPart from "./heroDesktopPart/HeroDesktopPart";
 import { ArrowSvg } from "../../../shared/img/ArrowSvg";
-import { ourAddress } from "../../../data/dataAboutProducts";
+import { ourAddress } from "../../../assets/data/dataAboutProducts";
 
 import { HeroWrapper, Slogan, Span, Title, Wrapper } from "./Hero.styled";
 import { theme } from "../../../utils/theme";

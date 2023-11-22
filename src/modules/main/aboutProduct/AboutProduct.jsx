@@ -2,7 +2,9 @@ import { useContext } from "react";
 import { ShopContext } from "../../../context/ShopProvider";
 
 import { List } from "./aboutProduct.style";
+
 import SectionPromotion from "./sectionPromotion/SectionPromotion";
+
 import SectionAboutUs from "./sectionAboutUs/SectionAboutUs";
 
 const AboutProduct = () => {

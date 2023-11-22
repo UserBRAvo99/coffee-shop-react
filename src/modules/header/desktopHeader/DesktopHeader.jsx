@@ -4,7 +4,10 @@ import { ShopContext } from "../../../context/ShopProvider";
 import { Link } from "react-scroll";
 import BtnGreen from "../../../shared/BtnGreen";
 import LogoAndTittle from "../../../shared/LogoAndTittle";
-import { dataMenuLink, ourAddress } from "../../../data/dataAboutProducts";
+import {
+  dataMenuLink,
+  ourAddress,
+} from "../../../assets/data/dataAboutProducts";
 
 import { theme } from "../../../utils/theme";
 import { Item, List, Wrapper, WrapperNavBtn } from "./DesktopHeader.styled";
