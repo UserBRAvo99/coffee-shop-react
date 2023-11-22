@@ -12,7 +12,7 @@ export const ShopProvider = ({ children }) => {
   const { handleClickBtn, isOpen } = useMobileMenu();
   //  функція яка повертає кількість відрендерених елементів відносно умови(розміру екрана)
   const { numberOfProducts, numberOfAddress } = useQuantity();
-
+  // медіа запити
   const {
     isTabletScreen,
     isNoteScreen,
