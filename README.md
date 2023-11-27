@@ -1,8 +1,8 @@
-# osSystem_V2.0: Проект разработан для компании osSystem
+# Samwayle: Проект разработан для ка'ярні Samwayle
 
-[Демо версия проекта](https://os-system-v2.vercel.app/)
+[Посилання на проект](coffee-shop-react-seven.vercel.app/)
 
-# Запуск проекта OsSystemV2.0
+# Запуск проекта Samwayle
 
 Цей проект розроблений для компанії Samwayle. Для запуску проекту, виконайте наступні кроки:
 
